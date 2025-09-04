@@ -16,7 +16,7 @@
     <p class="max-w-lg text-xl text-center">
       Chose a range with a starting and an ending values, then click on "Pick a number" and watch the magical sphere making a choice.
     </p>
-    <div class="flex flex-wrap gap-8">
+    <div class="flex flex-wrap gap-8 justify-center">
       <div class="bg-gray-900 rounded-lg">
         <MagicalInput type="number" placeholder="Starts from" v-model="starts" />
       </div>
