@@ -1,10 +1,11 @@
 <template>
   <div class="sphere" v-bind="$attrs">
-    <b v-for="letter, index in content" v-bind:key="index"
+    <span v-for="letter, index in content" v-bind:key="index"
+      class="min-w-1"
       :class="{magical: isMagical}"
       :style="{animationDelay: (0.1*index) + 's' }">
       {{ letter }}
-    </b>
+    </span>
     <div class="shade"></div>
   </div>
 </template>
@@ -69,22 +70,22 @@ export default {
     transform: rotate(90deg);
     box-shadow:
       0 10px 20px 0 var(--color-white) inset,
-      0 20px 30px 0 var(--color-purple-400) inset,
-      0 60px 60px 0 var(--color-indigo-600) inset;
+      0 20px 30px 0 var(--color-sky-400) inset,
+      0 60px 60px 0 var(--color-blue-600) inset;
   }
   50% {
     transform: rotate(270deg);
     box-shadow:
       0 10px 20px 0 var(--color-white) inset,
-      0 20px 10px 0 var(--color-rose-400) inset,
-      0 40px 60px 0 var(--color-indigo-800) inset;
+      0 20px 10px 0 var(--color-sky-200) inset,
+      0 40px 60px 0 var(--color-blue-800) inset;
   }
   100% {
     transform: rotate(450deg);
     box-shadow:
       0 10px 20px 0 var(--color-white) inset,
-      0 20px 30px 0 var(--color-purple-400) inset,
-      0 60px 60px 0 var(--color-indigo-600) inset;
+      0 20px 30px 0 var(--color-sky-400) inset,
+      0 60px 60px 0 var(--color-blue-600) inset;
   }
 }
 

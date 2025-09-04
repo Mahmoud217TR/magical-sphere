@@ -65,7 +65,7 @@ export default {
 
 .input-border-alt {
   height: 3px;
-  background: linear-gradient(90deg, var(--color-indigo-700) 0%, var(--color-purple-400) 50%, var(--color-white) 100%);
+  background: linear-gradient(90deg, var(--color-blue-700) 0%, var(--color-sky-400) 50%, var(--color-white) 100%);
   transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
 }
 

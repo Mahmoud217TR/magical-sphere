@@ -13,14 +13,14 @@
 
   <main class="mt-10 mb-20 px-8 flex flex-col items-center justify-center gap-8">
     <MagicalSphere class="cursor-grab shadow-2xl shadow-black" :content="content" :is-magical="true"/>
-    <p class="max-w-md text-xl text-center">
-      Chose a starting value and an ending one, then click on "Pick a number" and watch the magic.
+    <p class="max-w-lg text-xl text-center">
+      Chose a range with a starting and an ending values, then click on "Pick a number" and watch the magical sphere making a choice.
     </p>
     <div class="flex flex-wrap gap-8">
-      <div class="bg-gray-900 ">
+      <div class="bg-gray-900 rounded-lg">
         <MagicalInput type="number" placeholder="Starts from" v-model="starts" />
       </div>
-      <div class="bg-gray-900 ">
+      <div class="bg-gray-900 rounded-lg">
         <MagicalInput type="number" placeholder="Ends with" v-model="ends" />
       </div>
     </div>
@@ -37,7 +37,7 @@
       <p class="text-center text-2xl">
         Copyright © 2025 All Rights Reserved -
         <a href="https://github.com/Mahmoud217TR" target="__blank"
-          class="hover:text-rose-500 hover:text-shadow-[0_0_10px] hover:text-shadow-current transition-colors duration-300">
+          class="hover:text-indigo-400 hover:text-shadow-[0_0_10px] hover:text-shadow-current transition-colors duration-300">
           MahmoudTR
         </a>
       </p>
@@ -62,12 +62,13 @@ export default {
         let ends = parseFloat(this.ends);
 
         if (ends > starts) {
-          this.content = "Picked: " + this.randomNumber(starts, ends);
+          this.content = "Picking...";
+          setTimeout(() => this.content = "Picked: " + this.randomNumber(starts, ends), 1500);
         } else {
-          this.content = "Invalid: " + starts + " -> " + ends;
+          this.content = "Invalid range!";
         }
       } else {
-        this.content = "Wrong!";
+        this.content = "I need a range!";
       }
     },
     randomNumber(min, max) {

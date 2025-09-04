@@ -28,7 +28,7 @@ button {
 .container {
   position: relative;
   padding: 3px;
-  background: linear-gradient(90deg, var(--color-indigo-400), var(--color-purple-600));
+  background: linear-gradient(90deg, var(--color-blue-700), var(--color-sky-300));
   border-radius: 0.9em;
   transition: all 0.4s ease;
 }
@@ -45,7 +45,7 @@ button {
 }
 
 .container:hover::before {
-  background: linear-gradient(90deg, var(--color-indigo-400), var(--color-purple-600));
+  background: linear-gradient(90deg, var(--color-blue-700), var(--color-sky-300));
   filter: blur(1.2em);
 }
 .container:active::before {
